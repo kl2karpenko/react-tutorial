@@ -1,22 +1,23 @@
 // ## 1 Properties in components
 
-// var App = React.createClass({
+// var Application = React.createClass({
 // 	render: function () {
+// 		console.log(this.props)
 // 		return <div>Hello {this.props.name}!</div>
 // 	}
 // });
-
+//
 // ReactDOM.render(
-// 	<App name="Lily"/>,
+// 	<Application name="Lily" fullName="Karpenko"/>,
 // 	document.body
 // );
 
 // ## 2 Define properties as default
 
-// var App = React.createClass({
-// 	getDefaultProps : function() {
+// var Application = React.createClass({
+// 	getDefaultProps: function() {
 // 		return {
-// 			"name" : "anonymous"
+// 			"name" : "Anonymous"
 // 		};
 // 	},
 //
@@ -26,14 +27,14 @@
 // });
 //
 // ReactDOM.render(
-// 	<App/>,
+// 	<Application name="User"/>,
 // 	document.body
 // );
 
 // ## 3 Define properties as default
 
 // var App = React.createClass({
-// 	getDefaultProps : function() {
+// 	getDefaultProps: function() {
 // 		return {
 // 			"name" : "anonymous"
 // 		};

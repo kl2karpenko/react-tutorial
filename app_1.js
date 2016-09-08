@@ -1,50 +1,76 @@
 // ## 1 Creating 1 component
 
-// var App = React.createClass({
+// var Button = React.createClass({
 // 	render: function () {
-// 		return <div>Hello Lily!</div>
+// 		var text = "Click";
+//
+// 		return <button>{text}</button>;
 // 	}
 // });
 //
-// ReactDOM.render(
-// 	<App/>,
-// 	document.body
-// );
+// var Application = React.createClass({
+// 	render: function () {
+// 		return <div>
+// 			<div>Hello Lily!</div>
+// 			<Button/>
+// 		</div>
+// 	}
+// });
 
 // ## 2 Add interaction to component
-
-// var App = React.createClass({
-// 	onClickButton: function () {
+//
+// var Application = React.createClass({
+// 	onClickButton: function (event) {
 //
 // 		alert('I am clicked');
+//
+// 		console.log(event.target, this);
 //
 // 		// here this is "App" object
 // 	},
 //
+// 	onClickButton2: function () {
+//
+// 	},
+//
+// 	onChangeInput: function (ev) {
+// 		console.log(ev.target.value);
+// 	},
+//
 // 	render: function () {
 // 		return <div>
-// 			<div>Hello Lily!</div>
+// 			<div>Hello User!</div>
+//
+// 			<input
+// 				type="text"
+// 				onChange={this.onChangeInput}
+// 			/>
+//
 // 			<button
 // 				className="btn btn-success"
-// 				onClick={this.onClickButton}>
+// 				onClick={this.onClickButton}
+// 			>
 // 				Click here
+// 			</button>
+//
+// 			<button
+// 				className="btn btn-danger"
+// 				onClick={this.onClickButton2}
+// 			>
+// 				Click here this
 // 			</button>
 // 		</div>
 // 	}
 // });
-//
-// ReactDOM.render(
-// 	<App/>,
-// 	document.body
-// );
 
 // ## 3 Adding attributes to blocks
 
-// var App = React.createClass({
+// var Application = React.createClass({
 // 	render: function () {
 // 		return <div
 // 			    className="row"
-// 		      style={{ color: 'green', 'font-size': '15px' }}
+// 		      style={{ 'color': 'green',
+// 			      'font-size': '15px' }}
 //        >
 // 			<div className="col-xs-6">Hello Lily!</div>
 // 			<div className="col-xs-6">Goodbye</div>
@@ -53,8 +79,3 @@
 // 		</div>
 // 	}
 // });
-//
-// ReactDOM.render(
-// 	<App/>,
-// 	document.body
-// );
